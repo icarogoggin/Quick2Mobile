@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Quick2Mobile",
+    "version": "1.0",
+    "description": "Uma extensão que gera QR codes para facilitar o acesso a páginas no celular.",
+    "permissions": [
+        "activeTab"
+    ],
+    "action":{
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "popup.js"
+            ]
+        }
+    ]
+}
